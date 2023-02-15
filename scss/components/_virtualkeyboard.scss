@@ -1,0 +1,117 @@
+.virtualkeyboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+}
+    .input{
+        display: flex;
+        height: 100%;
+    }
+    .textEditor{
+        width: 100%;
+    }
+    .keyboard{
+        padding-bottom: 10px;
+        background-color: rgb(65, 64, 64);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .row{
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            
+            .button{
+                // padding: 5px;
+                font-family: sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: gray;
+                color: white;
+                min-width: 32px;
+                min-height: 36px;
+                border-radius: 4px;
+            }
+            
+        }
+    }
+
+.shift{
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1200px) {
+    
+   
+    .keyboard{      
+        background-color: pink;        
+        align-self: center;
+        align-items: flex-start;  
+        padding: 10px;  
+        cursor: pointer;
+        .row{
+                      
+            .button{             
+                position: relative;
+                min-width: 75px;
+                min-height: 75px;
+                
+            }
+            .Tab{
+                min-width: 105px;
+            }
+            .button:hover{
+             background-color: grey;
+            }
+            .Backspace{
+                
+                background-image:url('/img/icon/delete-left-solid.svg') ;
+                background-size: 40%;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 105px;
+            }
+            .Caps{
+                width: 135px;
+            }
+            .Enter{
+                width: 205px;
+            }
+            .Shift{
+                width: 170px;
+            }
+            .Spacebar{
+                width: 490px;
+            }
+            .styl{
+                width: 90px;
+            }
+            .signs{
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding-left: 5px;
+                padding-top: 5px;     
+                color: lightgray;           
+            }
+            .charContain.shift{
+            color: lightgray;  
+           }
+           .active{
+            color: white;  
+           }
+           .caps{
+            text-transform: uppercase;
+           }
+           .caps.shift{
+            text-transform: lowercase;
+           }
+        }
+    }
+    
+}
