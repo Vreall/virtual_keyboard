@@ -2,15 +2,15 @@ document.body.onload = switchBetweenKeyboards;
 
 const letterFirstRowTab = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
 const letterSecondRowTab = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
-const letterThirdRowTab = ['Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '<-'];
+const letterThirdRowTab = ['Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '<--'];
 const letterFourthRowTab = ['123', 'Spacebar', 'Enter'];
 const numFirstRowTab = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 const numSecondRowTab = ['-', '/', ':', ';', '(', ')', '$', '&', '@', '"'];
-const numThirdRowTab = ['#+=', '.', ',', '?', '!', "'", '<-'];
+const numThirdRowTab = ['#+=', '.', ',', '?', '!', "'", '<--'];
 const numForthRowTab = ['ABC', 'Spacebar', 'Enter'];
 const symbolsFirstRowTab = ['[', ']', '{', '}', '#', '%', '^', '*', '+', '='];
 const symbolsSecondRowTab = ['/', '\\', '|', '~', '<', '>', '€', '£', '¥', '·'];
-const symbolsThirdRowTab = ['123', '.', ',', '?', '!', "'", '<-'];
+const symbolsThirdRowTab = ['123', '.', ',', '?', '!', "'", '<--'];
 const desktopFirstRow = [
 	'Esc',
 	'`',
@@ -395,8 +395,21 @@ function createKeyboard(keyboardType) {
 					default:
 						div.classList.add('letter');
 				}
-			} else if (letter.toString().length == 1) {
-				div.classList.add('letter');
+			} else if (
+				document.querySelector('.keyboard').classList.contains('mobileVersion')
+			) {
+				if (letter.toString().length == 1) {
+					div.classList.add('letter');
+				} else if (letter.toString() === '<--') {
+					div.classList.add('Backspace');
+					div.removeChild(button);
+				} else if (letter.toString() === 'Shift') {
+					div.classList.add('Shift');
+				} else if (letter.toString() === 'Spacebar') {
+					div.classList.add('Spacebar');
+				} else if (letter.toString() === 'Enter') {
+					div.classList.add('Enter');
+				}
 			}
 
 			div.classList.add('button');

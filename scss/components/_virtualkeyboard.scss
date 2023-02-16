@@ -44,7 +44,29 @@
 .shift{
     text-transform: uppercase;
 }
-
+.Backspace{
+                
+    background-image:url('/img/icon/delete-left-solid.svg') ;
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+}
+.Shift{
+    width: 50px;
+}
+.Spacebar{
+    width: 150px;
+}
+.Enter{
+    width: 90px;
+}
+.mobileVersion{
+    .keyboard__row4{
+        justify-content: end;
+        padding-right: 5px;
+    }
+}
 @media only screen and (min-width: 1200px) {
     
    
@@ -68,12 +90,7 @@
             .button:hover{
              background-color: grey;
             }
-            .Backspace{
-                
-                background-image:url('/img/icon/delete-left-solid.svg') ;
-                background-size: 40%;
-                background-position: center;
-                background-repeat: no-repeat;
+            .Backspace{               
                 width: 105px;
             }
             .Caps{
