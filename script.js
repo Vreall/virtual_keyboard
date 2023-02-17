@@ -212,6 +212,7 @@ function switchBetweenKeyboards() {
 		document.querySelector('.keyboard').classList.add('desktopVersion');
 		document.querySelector('.keyboard').classList.remove('mobileVersion');
 		if (document.querySelector('.keyboard').classList.contains('AltGrActive')) {
+			console.log('active!!!!!!!!!!!');
 			rowRemover();
 			createKeyboard(desktopAltGrButtonTab);
 			document.querySelector('.keyboard').classList.add('AltGrActive');
@@ -605,7 +606,8 @@ function addingEventListener() {
 					coursorPosition = textArea.selectionEnd;
 				}
 			} else if (item.textContent == 'AltGr') {
-				document.querySelector('.AltGr').classList.toggle('AltGrActive');
+				console.log('AltGR');
+				document.querySelector('.keyboard').classList.toggle('AltGrActive');
 				switchBetweenKeyboards();
 			} else if (item.textContent == 'Del') {
 				const string = textArea.value.toString();
