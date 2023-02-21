@@ -216,6 +216,8 @@ function switchBetweenKeyboards() {
 			rowRemover();
 			createKeyboard(desktopAltGrButtonTab);
 			document.querySelector('.keyboard').classList.add('AltGrActive');
+			document.querySelector('.AltGr').classList.add('active');
+			console.log('active');
 		} else {
 			rowRemover();
 			createKeyboard(desktopButtonTab);
@@ -545,6 +547,9 @@ function addingEventListener() {
 					item.classList.toggle('shift');
 				});
 				document.querySelectorAll('.signs').forEach((item) => {
+					item.classList.toggle('active');
+				});
+				document.querySelectorAll('.Shift').forEach((item) => {
 					item.classList.toggle('active');
 				});
 			} else if (item.textContent == 'Enter') {

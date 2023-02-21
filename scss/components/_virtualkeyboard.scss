@@ -83,6 +83,7 @@
                 min-width: 75px;
                 min-height: 75px;
                 
+                
             }
             .Tab{
                 min-width: 105px;
@@ -121,7 +122,14 @@
            }
            .active{
             color: white;  
+            // background-color: rgb(54, 52, 52);
            }
+           .AltGr.active{
+            background-color: rgb(54, 52, 52);
+        }
+        .Shift.active{
+            background-color: rgb(54, 52, 52);
+        }
            .caps{
             text-transform: uppercase;
            }
@@ -129,6 +137,7 @@
             text-transform: lowercase;
            }
         }
+       
     }
     
 }
